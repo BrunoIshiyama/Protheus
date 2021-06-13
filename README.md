@@ -6,7 +6,7 @@ Springboot with JavaFX application for Simple Comercial Applications
 - JavaFX 11 - JavaFX sdk 11.0.2
 - MongoDB
 
-#Installing JavaFX SDK on your IntelliJ Project
+# Installing JavaFX SDK on your IntelliJ Project
 - Go to File > Project Structure > SDKs
 - Click on the "+" button on the top left panel
 - Select Java
