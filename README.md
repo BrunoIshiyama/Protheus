@@ -1,5 +1,5 @@
 # Protheus
-Springboot with JavaFX application for Simple Comercial Applications
+Springboot with JavaFX application for simple retail transactions
 
 # Requirements
 - Java 13 - Java 13 Azul Zulu Community 13.0.7
