@@ -34,7 +34,7 @@ public class CreateFXMLScene {
             return buildFXMLLoader(resource).load();
         } catch (IOException e) {
             log.error("An error occurred while fetching for fxml resource: {}", resource, e);
-            throw new RuntimeException(e.getMessage());
+            throw new ResourceNotFoundException(e.getMessage());
         }
     }
 
