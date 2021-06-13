@@ -1,0 +1,12 @@
+
+server:
+  port: 8080
+
+spring:
+  main:
+    web-application-type: none
+  data:
+    mongodb:
+      host: localhost:27017
+      database: Protheus
+
