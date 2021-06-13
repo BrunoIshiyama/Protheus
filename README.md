@@ -7,9 +7,9 @@ Springboot with JavaFX application for Simple Comercial Applications
 - MongoDB
 
 # Installing JavaFX SDK on your IntelliJ Project
-- Go to File > Project Structure > SDKs
+- Go to File > Project Structure > Global Libraries
 - Click on the "+" button on the top left panel
 - Select Java
-- Go to your JavaFX installation folder
-- Go to the lib folder 
+- Go to the lib folder on your JavaFX installation folder
+- Select all the jars
 - Press "ok"
