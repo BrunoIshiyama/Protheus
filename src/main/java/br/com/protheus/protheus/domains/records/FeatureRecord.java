@@ -9,7 +9,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 @Document("ProductFeatures")
 public class FeatureRecord {
-    //Color, Voltage, Size
 
     @Id
     private String id;

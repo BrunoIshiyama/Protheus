@@ -22,4 +22,32 @@ public class Inventory {
             return Collections.unmodifiableSet(Sets.newHashSet());
         return Collections.unmodifiableSet(barCodes);
     }
+
+    public Inventory addInventory(final Inventory newInventory) {
+        return Inventory.builder()
+                .product(getProduct())
+                .storeId(getStoreId())
+                .quantity(getQuantity() + newInventory.getQuantity())
+                .barCodes(appendBarCodes(newInventory.getBarCodes()))
+                .build();
+    }
+
+    public Inventory removeInventory(final Inventory newInventory) {
+
+        final var quantity = getQuantity() - newInventory.getQuantity();
+        final Set<String> barCodes = quantity == 0 ? Sets.newHashSet() : getBarCodes();
+
+        return Inventory.builder()
+                .product(getProduct())
+                .storeId(getStoreId())
+                .quantity(quantity)
+                .barCodes(barCodes)
+                .build();
+    }
+
+    public Set<String> appendBarCodes(final Set<String> newBarCodes) {
+        final var updatedBarCodes = Sets.newHashSet(getBarCodes());
+        updatedBarCodes.addAll(newBarCodes);
+        return updatedBarCodes;
+    }
 }
