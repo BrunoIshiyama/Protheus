@@ -23,7 +23,7 @@ public class LoginController implements Controller {
     private final ChangeScene changeScene;
 
     @FXML
-    private Button mamouButton;
+    private Button exitButton;
 
     @FXML
     private Button loginButton;
@@ -38,8 +38,8 @@ public class LoginController implements Controller {
     private Label loginStatusField;
 
     public void exitButtonOnAction() {
-        final var stage = getStage(mamouButton);
-                stage.close();
+        final var stage = getStage(exitButton);
+        stage.close();
     }
 
     public void loginButtonOnAction() {

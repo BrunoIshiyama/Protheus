@@ -42,7 +42,7 @@
          <Button id="loginButton" fx:id="loginButton" layoutX="46.0" layoutY="305.0" mnemonicParsing="false"
                  onAction="#loginButtonOnAction" prefHeight="30.0" prefWidth="200.0"
                  style="-fx-background-color: #d45500;" text="Login"/>
-         <Button id="mamouButton" fx:id="mamouButton" layoutX="112.0" layoutY="352.0" mnemonicParsing="false"
+         <Button id="exitButton" fx:id="exitButton" layoutX="112.0" layoutY="352.0" mnemonicParsing="false"
                  onAction="#exitButtonOnAction" style="-fx-background-color: #bbbbbb;" text="Sair"/>
          <Label id="loginStatusField" fx:id="loginStatusField" alignment="CENTER" layoutX="37.0" layoutY="276.0"
                 prefHeight="17.0" prefWidth="235.0" textAlignment="CENTER"
