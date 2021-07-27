@@ -1,5 +1,6 @@
 package br.com.protheus.protheus.domains.enums.fxml;
 
+import br.com.protheus.protheus.fxml.controllers.Controller;
 import br.com.protheus.protheus.fxml.controllers.LoginController;
 import br.com.protheus.protheus.fxml.controllers.MainController;
 import br.com.protheus.protheus.fxml.controllers.RegisterUserController;
@@ -20,6 +21,6 @@ public enum FXMLResource {
     private final String path;
     private final Texts title;
     private final Dimensions dimensions;
-    private final Class controllerClass;
+    private final Class<? extends Controller> controllerClass;
 
 }

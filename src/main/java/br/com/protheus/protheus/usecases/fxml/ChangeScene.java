@@ -2,14 +2,10 @@ package br.com.protheus.protheus.usecases.fxml;
 
 import br.com.protheus.protheus.domains.enums.fxml.FXMLResource;
 import javafx.scene.Scene;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
-import javafx.scene.media.MediaView;
 import javafx.stage.Stage;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.io.File;
 import java.util.Objects;
 
 @Service

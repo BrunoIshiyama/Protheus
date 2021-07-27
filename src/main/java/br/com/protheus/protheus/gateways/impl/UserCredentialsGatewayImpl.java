@@ -1,8 +1,9 @@
-package br.com.protheus.protheus.gateways;
+package br.com.protheus.protheus.gateways.impl;
 
 import br.com.protheus.protheus.converters.UserCredentialsConverter;
 import br.com.protheus.protheus.domains.UserCredentials;
 import br.com.protheus.protheus.exceptions.UserNotFoundException;
+import br.com.protheus.protheus.gateways.UserCredentialsGateway;
 import br.com.protheus.protheus.gateways.mongo.UserCredentialsRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;

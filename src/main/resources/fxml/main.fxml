@@ -12,7 +12,7 @@
          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@../images/lock-80-80.png" />
          </ImageView>
-         <Button fx:id="registerUserButton" mnemonicParsing="false" onAction="#OnActionRegisterButton" prefWidth="400.0" text="Novo Usuário" />
+         <Button fx:id="registerUserButton" mnemonicParsing="false" onAction="#onActionRegisterButton" prefWidth="400.0" text="Novo Usuário" />
       </VBox>
    </left>
 </BorderPane>

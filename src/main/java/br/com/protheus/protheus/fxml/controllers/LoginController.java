@@ -3,7 +3,6 @@ package br.com.protheus.protheus.fxml.controllers;
 import br.com.protheus.protheus.domains.RawCredentials;
 import br.com.protheus.protheus.usecases.ValidateLoginCredentials;
 import br.com.protheus.protheus.usecases.fxml.ChangeScene;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -18,13 +17,13 @@ import static br.com.protheus.protheus.utils.fxml.Stages.getStage;
 
 @Component
 @RequiredArgsConstructor
-public class LoginController {
+public class LoginController implements Controller {
 
     private final ValidateLoginCredentials validateLoginCredentials;
     private final ChangeScene changeScene;
 
     @FXML
-    private Button mamouButton;
+    private Button exitButton;
 
     @FXML
     private Button loginButton;
@@ -38,12 +37,12 @@ public class LoginController {
     @FXML
     private Label loginStatusField;
 
-    public void exitButtonOnAction(final ActionEvent event) {
-        final var stage = getStage(mamouButton);
-                stage.close();
+    public void exitButtonOnAction() {
+        final var stage = getStage(exitButton);
+        stage.close();
     }
 
-    public void loginButtonOnAction(final ActionEvent event) {
+    public void loginButtonOnAction() {
         final var usernameOrEmail = nameField.getText();
         final var password = passwordField.getText();
         final var currentScene = getStage(loginButton).getScene();

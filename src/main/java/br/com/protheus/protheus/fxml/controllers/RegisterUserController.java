@@ -2,19 +2,18 @@ package br.com.protheus.protheus.fxml.controllers;
 
 import br.com.protheus.protheus.domains.UserCredentials;
 import br.com.protheus.protheus.usecases.CreateUser;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
-import java.util.Objects;
-
+@Slf4j
 @Component
 @RequiredArgsConstructor
-public class RegisterUserController {
+public class RegisterUserController implements Controller {
 
     private final CreateUser createUser;
 
@@ -36,7 +35,7 @@ public class RegisterUserController {
     @FXML
     private PasswordField confirmPasswordField;
 
-    public void onActionSaveUserButton(final ActionEvent event) {
+    public void onActionSaveUserButton() {
         final var password = passwordField.getText();
         final var secret = secretField.getText();
         final var username = usernameField.getText();
@@ -50,9 +49,6 @@ public class RegisterUserController {
                 .username(username)
                 .build();
         final var createdUser = createUser.execute(userCredentials);
-        if (Objects.nonNull(createdUser)) {
-            System.out.println("user " + createdUser + "created successfully");
-        }
+        log.info("New user created: {}", createdUser.getUuid());
     }
-
 }
